@@ -1,0 +1,124 @@
+ /* remember to put in the fallbacks */
+
+body {
+    margin:0;
+}
+
+/* universal selector */
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+ /* class  selector */
+.sum {
+    color: #2E3D17;
+    margin: 0;
+    padding: 1px 10px;
+}
+
+/* id selector */
+#meeting1 {
+    color: hsl(72, 73%, 22%);
+}
+
+/* element selector */
+h1 {
+
+}
+
+/* attribute selector */
+li[attr="forgot"] {
+
+}
+
+/* pseudo-class selector */
+details:hover { 
+    background-color: rgb(152, 192, 169);
+}
+
+/* selector list */
+h3, h4 {
+    color: pink;
+}
+
+
+
+/* child combinator */
+span > a {
+    color: #FFC0CB;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+/* adjacent sibling combinator */
+h3 + p {
+    color: green;
+}
+
+
+/* :has() selector */
+ul:has(li) {
+    color: gray;
+}
+
+/* descendant combinator */
+.agenda li {
+    color: color(srgb 0.533 0.471 0.765 / 0.8) ;
+}
+
+
+/* general sibling combinator */
+ul ~ li {
+    color: color-mix(in srgb, purple 60%, white 40%);
+}
+
+/* combining two selectors */
+ul.topics {
+    color: purple;
+}
+
+/* nested selectors */
+.attendance {
+    background-color: lavender;
+    .attendees>li:hover{
+        background-color: lightgreen;
+    }
+}
+
+nav {
+    background-color: #2E3D17;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color:white;
+    padding: 14px 20px;
+    z-index: 10;
+    box-sizing: border-box;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+h1 {
+    font-size: 2rem;
+}
+
+#all-meeting {
+    display: flex;
+    margin-top: 8px;
+    font-size: 1rem;
+
+}
+
+#class-sum {
+    padding-top: 100px;
+}
+
+img {
+    width: 30%;
+    height: auto;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}    
+
