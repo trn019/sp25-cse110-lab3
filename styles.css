@@ -6,8 +6,10 @@ body {
 
 /* universal selector */
 * {
-    font-family: sans-serif;
+    font-family: "Winky Rough", sans-serif;
     box-sizing: border-box;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
  /* class  selector */
@@ -20,16 +22,39 @@ body {
 /* id selector */
 #meeting1 {
     color: hsl(72, 73%, 22%);
+    h2{
+        text-decoration: dotted underline;
+    }
+    
+}
+
+#meeting2 {
+    color:rgb(0, 69, 69);
+    h2{
+        text-decoration:overline;
+    }
+}
+
+#meeting3 {
+    color:rgb(0, 8, 84);
+    h2{
+        text-decoration: underline;
+    }
 }
 
 /* element selector */
 h1 {
-
+    color: lightgoldenrodyellow;
+    font-size: 2rem;
+}
+h2 {
+    font-size: 2.3em;
+    text-align: center;
 }
 
 /* attribute selector */
 li[attr="forgot"] {
-
+    text-decoration: line-through;
 }
 
 /* pseudo-class selector */
@@ -41,8 +66,6 @@ details:hover {
 h3, h4 {
     color: pink;
 }
-
-
 
 /* child combinator */
 span > a {
@@ -96,7 +119,15 @@ nav {
     z-index: 10;
     box-sizing: border-box;
     align-items: center;
-    flex-direction: column;
+    h1 {
+        text-align: center;
+    }
+    #all-meeting{
+        display: flex; 
+        /* three items */
+        justify-content: center;
+    }
+    
     margin: 0;
 }
 h1 {
@@ -104,21 +135,103 @@ h1 {
 }
 
 #all-meeting {
-    display: flex;
     margin-top: 8px;
     font-size: 1rem;
 
 }
-
-#class-sum {
-    padding-top: 100px;
+#title-sum {
+    padding-top: 120px;
 }
 
-img {
-    width: 30%;
-    height: auto;
-    display: block;
+#class-sum {
+    /* three items */
+    padding-top: 20;
+    display:flex;
+    justify-content: center;
+    
+}
+
+#img-container {
+    display: flex;
     align-items: center;
     justify-content: center;
-}    
 
+}    
+#img-container img {
+    width: 300pt;
+    height: auto;
+}
+
+/* ensures that the video doesn't take up more than 400 px */
+video{
+    width:30%;  
+    height:auto;
+    max-height: 400px;
+}
+h3 {
+    text-decoration: dashed underline;
+    font-size: 1.5rem;
+}
+audio {
+    width:80mm;
+    height:10mm;
+
+}
+
+/* ensures that when the screen is smaller, the width doesn't exceed 300 px */
+#counter {
+    width:30%;
+    min-width: 250px;
+    height: 50px;
+}
+
+/* will change counter to black box and pink text */
+#counter:active {
+    background-color: black;
+    color:#FFC0CB;
+}
+
+.new-topics, .qcc, .unfinished {
+    display:inline-block;
+    padding: 5px 10px 5px 10px;
+    margin: 10px 20px 0 20px;
+}
+
+.agenda, .attendance {
+    display: inline-block;
+    padding-top:5px;
+    padding-bottom:2px;
+    padding-right:20px;
+    padding-left:20px;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-right:40px;
+    margin-left:40px;
+}
+
+/* turn em and strong elements(originally inline elements) into block elements */
+em,strong{
+    display:block;
+}
+
+/* three items */
+#desserts {
+    height: 850px;
+    margin:auto;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#desserts img {
+    margin: 10px;
+    padding: 10px;
+    background-color: #FFC0CB;
+    border-radius: 5px;
+}
+
+
+p {
+    margin-left: 10px;
+}
